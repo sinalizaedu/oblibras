@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./stylesheets/style.css" />
+  <link rel="stylesheet" href="./stylesheets/timeline.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <title>OBMLibras</title>
+</head>
+
+<body>
+  <nav class="nav">
+    <div class="nav__container container">
+      <div class="nav__left">
+        <button class="nav__hamburger" aria-label="Menu"></button>
+        <ul class="nav__nav-desktop">
+          <li class="nav__desktop-item">
+            <a href="obmlibras.html" title="OBMLibras" class="nav__desktop-link">
+              <img width="60" height="100" viewBox="0 0 60 100" fill="none" class="nav__logo"
+                src="./imgs/logo-obm.png" />
+            </a>
+          </li>
+          <li class="nav__desktop-item">
+            <a href="obflibras.html" title="OBFLibras" class="nav__desktop-link">
+              <img width="60" height="100" viewBox="0 0 30 50" fill="none" class="nav__logo"
+                src="./imgs/logo-obf.png" />
+            </a>
+          </li>
+          <li class="nav__desktop-item">
+            <a href="obalibras.html" title="OBALibras" class="nav__desktop-link">
+              <img width="60" height="100" viewBox="0 0 30 50" fill="none" class="nav__logo"
+                src="./imgs/logo-oba.png" />
+            </a>
+          </li>
+        </ul>
+
+        <span class="nav__logo-name">OBM Libras</span>
+      </div>
+      <div class="nav__right">
+        <button class="nav__hamburger" aria-label="Menu"></button>
+        <ul class="nav__nav-desktop">
+          <li class="nav__desktop-item">
+            <a href="#" class="btn btn-secondary nav__desktop-link">Embaixadores</a>
+          </li>
+          <li class="nav__desktop-item">
+            <a href="#" class="btn nav__desktop-link">Inscrições</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="nav__mobile-nav">
+      <div class="nav__mobile-nav container">
+        <ul class="nav__mobile-links">
+          <li class="nav__mobile-item">
+            <a href="#" class="nav__mobile-link">Inscrições</a>
+          </li>
+          <li class="nav__mobile-item">
+            <a href="#" class="nav__mobile-link">Embaixadores</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <header class="header">
+    <div class="header__container container">
+      <div class="header__img">
+        <picture>
+          <source media="(max-width: 560px)" srcset="./imgs/logo-obm.png" />
+          <img loading="lazy" src="./imgs/logo-obm.png" alt="Mobile Image" class="img-screen-ui" />
+        </picture>
+      </div>
+      <div class="header__text">
+        <h1 class="header__heading-text">
+          OBMLibras
+          <span class="highlighted">2023</span>
+        </h1>
+        <p class="header__text-text">
+          2ª Olimpíada Brasileira de Matemática em Libras
+        </p>
+
+        <div class="btn-group">
+          <a class="btn" onClick="document.getElementById('sec2022').scrollIntoView();">
+            Edição 2022
+          </a>
+          <a href="provasantigas.html" class="btn btn-secondary">
+            Provas Antigas
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section class="section sobrenos red-background">
+      <div class="section__container container" data-aos="fade-up">
+        <div class="section__text-content">
+          <h2 class="section__heading yellow">
+            Sobre nós
+          </h2>
+          <p align="justify" class="section__text">
+            Olimpíada Brasileira de Matemática em Libras (OBMLibras)
+            é a primeira e única competição científica de âmbito nacional
+            completamente em Libras, Língua Brasileira de Sinais.
+            A prova é anualmente oferecida em escolas públicas e privadas com
+            alunos surdos em todas as regiões do Brasil.
+            Os alunos receberão acesso a uma plataforma com as questões
+            gravadas em vídeo em Libras, elaboradas por professores surdos e ouvintes.
+          </p>
+        </div>
+        <div class="section__img">
+          <picture>
+            <source media="(max-width : 560px)" srcset="./imgs/sobre-nos.png" />
+            <img loading="lazy" src="./imgs/sobre-nos.png" alt="Mobile Image" />
+          </picture>
+        </div>
+      </div>
+    </section>
+
+    <section class="section cronograma yellow-background">
+      <h2 class="section__heading white text-centered">Cronograma</h2>
+      <div class="section__container container" data-aos="fade-up">
+        <div class="progress">
+          <div class='progress_inner'>
+            <div class='progress_inner__step'>
+              <label for='step-1'>Abertura</label>
+            </div>
+            <div class='progress_inner__step'>
+              <label for='step-2'>Inscrições</label>
+            </div>
+            <div class='progress_inner__step'>
+              <label for='step-3'>Prova</label>
+            </div>
+            <div class='progress_inner__step'>
+              <label for='step-4'>Resultados</label>
+            </div>
+            <div class='progress_inner__step'>
+              <label for='step-5'>Premiação</label>
+            </div>
+            <input checked='checked' id='step-1' name='step' type='radio'>
+            <input id='step-2' name='step' type='radio'>
+            <input id='step-3' name='step' type='radio'>
+            <input id='step-4' name='step' type='radio'>
+            <input id='step-5' name='step' type='radio'>
+            <div class='progress_inner__bar'></div>
+            <div class='progress_inner__bar--set'></div>
+            <div class='progress_inner__tabs'>
+              <div class='tab tab-0'>
+				<h2>Cerimônia de Abertura</h2>
+                <p>A Cerimônia de Abertura da OBMLibras 2023 será realizada no dia 10/05/2023, às 19h. O principal objetivo da
+                  cerimônia é introduzir os alunos ao mundo da Matemática e esclarecer eventuais dúvidas dos alunos e
+                  professores.</p>
+              </div>
+              <div class='tab tab-1'>
+                <h2>Período de Inscrições</h2>
+                <p>As escolas interessadas deverão realizar a inscrição de seus alunos até o dia 31/07/2023. O regulamento 
+                está disponível no rodapé em Documentos > Regulamento.</p>
+              </div>
+              <div class='tab tab-2'>
+                <h2>Prova</h2>
+                <p>A prova da OBMLibras ocorrerá na escola cadastrada no dia 04/08/2023. O regulamento está disponível no rodapé em Documentos > Regulamento.</p>
+              </div>
+              <div class='tab tab-3'>
+                <h2>Resultados</h2>
+                <p>Os resultados serão enviados às escolas pelo e-mail de cadastro no dia 21/08/2023. Para saber mais sobre o período de recurso, ver o regulamento, disponível no rodapé em Documentos > Regulamento. </p>
+              </div>
+              <div class='tab tab-4'>
+                <h2>Premiação</h2>
+                <p>A data e o modelo da premiação serão definidos em breve.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <section class="section niveis white-background">
+      <h2 class="section__heading text-centered red-red">Níveis</h2>
+      <div class="section__container container" data-aos="fade-up">
+        <div class="section__img centered">
+          <picture>
+            <source media="(max-width : 560px)" srcset="./imgs/nivel-1.png" />
+            <img class="img-screen-ui" loading="lazy" src="./imgs/nivel-1.png" alt="Imagem: Nivel-1 Mobile" />
+          </picture>
+        </div>
+        <div class="section__img centered">
+          <picture>
+            <source media="(max-width : 560px)" srcset="./imgs/nivel-2.png" />
+            <img class="img-screen-ui" loading="lazy" src="./imgs/nivel-2.png" alt="Imagem: Nivel-2 Mobile" />
+          </picture>
+        </div>
+      </div>
+    </section>
+
+    <section class="section edicao-passada orange-background" id="sec2022">
+      <h2 class="section__heading text-centered">Edição 2022</h2>
+      <div class="section__container container" data-aos="fade-up">
+        <div class="section__text-content">
+          <h3 class="white">Primeira Edição da OBMLibras</h3>
+          <h3 class="white">Cerimônia de Abertura</h3>
+          <p>A Matemática na Libras: Experiências de Matemáticos Surdos</p>
+          <img class="section__text-convidados" loading="lazy" src="./imgs/convidados.png" alt="Convidados do evento" />
+          <p class="section__text-convidados text-centered">Convidados: Prof. Zanúbia Dada, Prof. Júnior, Estudante Matheus</p>
+          <h3 class="white"> </h3>
+          <h3 class="white">Resultados</h3>
+          <p class="low-bot">386 alunos, em sua maioria dos estados de SP, MA, ES, GO e RJ</p>
+          <p class="low-bot">47 escolas das 5 regiões do Brasil, sendo 92% da rede pública de ensino</p>
+          <p class="low-bot">60% dos alunos no Ensino Médio e 40% no Ensino Fundamental II</p>
+        </div>
+        <div class="section__img">
+          <picture>
+            <source media="(max-width : 200px)" srcset="./imgs/fotos.png" />
+            <img loading="lazy" src="./imgs/fotos.png" alt="Imagem: Fotos Mobile" />
+          </picture>
+        </div>
+      </div>
+    </section>
+
+    <section class="section premios yellow-background">
+      <h2 class="section__heading text-centered navy-blue">Vencedores - Edição 2022</h2>
+      <div class="section__container__premios container" data-aos="fade-up">
+        <h3 class="black text-centered">Ensino Fundamental (6º e 7º ano)</h3>
+        <div class="section__img">
+          <picture>
+            <source media="(max-width : 560px)" srcset="./imgs/alunos-nivel-1.png" />
+            <img loading="lazy" src="./imgs/alunos-nivel-1.png" alt="Imagem: Vencedores Nível 1 Mobile" />
+          </picture>
+        </div>
+        <h3 class="black text-centered">Ensino Fundamental (8º e 9º ano)</h3>
+        <div class="section__img">
+          <picture>
+            <source media="(max-width : 560px)" srcset="./imgs/alunos-nivel-2.png" />
+            <img loading="lazy" src="./imgs/alunos-nivel-2.png" alt="Imagem: Vencedores Nível 2 Mobile" />
+          </picture>
+        </div>
+        <h3 class="black text-centered">Ensino Médio (1ª, 2ª e 3ª série)</h3>
+        <div class="section__img">
+          <picture>
+            <source media="(max-width : 560px)" srcset="./imgs/alunos-nivel-3.png" />
+            <img loading="lazy" src="./imgs/alunos-nivel-3.png" alt="Imagem: Vencedores Nível 3 Mobile" />
+          </picture>
+        </div>
+      </div>
+    </section>
+
+    <section class="section realizacao white-background">
+      <div class="section__container container"  data-aos="fade-up">
+        <div class="section__text-content">
+          <h2 class="realizacao-title text-centered red-red">
+            Realização
+          </h2>
+          <div class="centered">
+            <picture>
+              <source media="(max-width: 10px)" srcset="./imgs/logo-sinaliza.png" />
+              <img loading="lazy" src="./imgs/logo-sinaliza.png" alt="Logotipo Sinaliza Enem"/>
+            </picture>
+            <picture>
+              <source media="(max-width: 30px)" srcset="./imgs/logo-mapa-edu.png" />
+              <img loading="lazy" src="./imgs/logo-mapa-edu.png" alt="Logotipo Mapa Educação" />
+            </picture>
+          </div>
+        </div>
+        <div class="section__text-content">
+          <h2 class="realizacao-title text-centered red-red">
+            Apoio
+          </h2>
+          <div class="centered">
+            <picture>
+              <source media="(max-width: 5px)" srcset="./imgs/logocasa.jpg" width="100" />
+              <img loading="lazy" src="./imgs/logo-casa-desc.jpg" alt="Logotipo Casa da Descoberta"  />
+            </picture>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="section footer footer-black-background">
+    <section class="footer__container container red-red ">
+      <div id="comp-lag4b8fs" class="MazNVa comp-lag4b8fs wixui-image" title="Favicon">
+        <div>
+          <img
+            src="https://static.wixstatic.com/media/0b6a15_1d789814850949e58238709848ee766e~mv2.png/v1/fill/w_116,h_116,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/0b6a15_1d789814850949e58238709848ee766e~mv2.png"
+            alt="Logo da Sinaliza"
+            style="width: 116px; height: 116px; object-fit: cover; object-position: 50% 50%; margin-right: 8em;"
+            fetchpriority="high">
+        </div>
+      </div>
+      <article class="footer__links">
+        <p class="footer__links-heading">OBLibras</p>
+        <ul class="footer__links-list">
+          <li class="footer__links-item">
+            <a href="https://www.sinalizaenem.com.br" class="footer__link">Sinaliza</a>
+          </li>
+          <li class="footer__links-item">
+            <a href="https://mapaeducacao.com/" class="footer__link">Mapa Educação</a>
+          </li>
+          <li class="footer__links-item">
+            <a href="edicoesanteriores.html" class="footer__link">Edições Anteriores</a>
+          </li>
+          <li class="footer__links-item">
+            <a href="provasantigas.html" class="footer__link">Provas Antigas</a>
+          </li>
+        </ul>
+      </article>
+
+      <article class="footer__links">
+        <p class="footer__links-heading">Documentos</p>
+        <ul class="footer__links-list">
+          <li class="footer__links-item">
+            <a href="./docs/regulamento-obm.pdf" class="footer__link" target="_blank">Regulamento</a>
+          </li>
+          <li class="footer__links-item">
+            <a href="https://www.sinalizaenem.com.br/termos-de-uso" class="footer__link">Termos de Uso</a>
+          </li>
+          <li class="footer__links-item">
+            <a href="https://www.sinalizaenem.com.br/politica-de-privacidade" class="footer__link">Política de
+              Privacidade</a>
+          </li>
+        </ul>
+      </article>
+
+      <article class="footer__links">
+        <p class="footer__links-heading">Contato</p>
+        <ul class="footer__links-list">
+          <li class="footer__links-item">
+            <a href="https://api.whatsapp.com/send?phone=5521983030377&text=Ol%C3%A1!%20Quero%20falar%20sobre%20a%20OBMLibras!"
+              class="footer__link">Whatsapp</a>
+          </li>
+          <li class="footer__links-item">
+            <a href="https://www.instagram.com/sinalizaenem" class="footer__link">Instagram</a>
+          </li>
+          <li class="footer__links-item">
+            <a href="mailto:oblibras@sinalizaenem.com?Subject=D%FAvida%20sobre%20a%20OBMLibras"
+              class="footer__link">E-mail</a>
+          </li>
+        </ul>
+      </article>
+    </section>
+    <div>
+      <p class="" style="font-size:14px; text-align:center;"><span style="font-size:14px;"><span class="color_11">2023 •
+            Sinaliza Enem •&nbsp; CNPJ 39.551.094/0001-22 • Rio de Janeiro, Brasil</span></span></p>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <script>
+    var hamburger = document.querySelector(".nav__hamburger");
+    var body = document.querySelector("body");
+    var mobileNavigation = document.querySelector(".nav__mobile-nav");
+
+    AOS.init();
+
+    function toggleMobileNav(e) {
+      body.classList.toggle("mobile-nav-open");
+    }
+
+    function isModalOpen() {
+      return body.classList.contains("mobile-nav-open") ? true : false;
+    }
+
+    // FIXME: Find a better way to close modal when body is clicked
+    function closeMobileMenu(e) {
+      console.log(
+        e.target.classList.contains("nav__mobiile-item") ||
+        e.target.classList.contains("nav__hamburger") ||
+        e.target.classList.contains("nav__container")
+      );
+      if (
+        isModalOpen() &&
+        (e.target.classList.contains("nav__mobiile-item") ||
+          e.target.classList.contains("nav__hamburger"))
+      )
+        return;
+
+      body.classList.remove("mobile-nav-open");
+    }
+
+    window.addEventListener("click", closeMobileMenu);
+
+    hamburger.addEventListener("click", toggleMobileNav);
+  </script>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-89929831-11"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+
+    gtag("config", "UA-89929831-11");
+  </script>
+</body>
+
+</html>

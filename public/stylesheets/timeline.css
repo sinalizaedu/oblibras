@@ -1,0 +1,238 @@
+body .progress{
+  color: var(--navy-blue);
+  text-align: center;
+  font-weight: 900;
+  position: relative;
+  min-height: 25em;
+}
+body .progress_inner #step-1:checked + input + input + input + input + div + div + div + div > .box_base, body .progress_inner #step-5:checked + div + div + div + div > .box_base, body .progress_inner #step-4:checked + input + div + div + div + div > .box_base, body .progress_inner #step-3:checked + input + input + div + div + div + div > .box_base, body .progress_inner #step-2:checked + input + input + input + div + div + div + div > .box_base {
+  top: 50%;
+  left: 0px;
+  opacity: 1;
+}
+body .progress_inner #step-1:checked + input + input + input + input + div + div + div + div > .box_item, body .progress_inner #step-5:checked + div + div + div + div > .box_item, body .progress_inner #step-4:checked + input + div + div + div + div > .box_item, body .progress_inner #step-3:checked + input + input + div + div + div + div > .box_item, body .progress_inner #step-2:checked + input + input + input + div + div + div + div > .box_item {
+  top: -30px;
+  left: 0px;
+  opacity: 0;
+}
+
+body .progress_inner #step-2:checked + input + input + input + div + div + div + div > .box_lid, body .progress_inner #step-5:checked + div + div + div + div > .box_lid, body .progress_inner #step-4:checked + input + div + div + div + div > .box_lid {
+  top: -20px;
+  left: 0px;
+  opacity: 0;
+}
+body .progress_inner #step-2:checked + input + input + input + div + div + div + div > .box_item, body .progress_inner #step-5:checked + div + div + div + div > .box_item, body .progress_inner #step-4:checked + input + div + div + div + div > .box_item {
+  top: -10px;
+  left: 0px;
+  opacity: 1;
+}
+
+body .progress_inner #step-3:checked + input + input + div + div + div + div > .box_item, body .progress_inner #step-5:checked + div + div + div + div > .box_item, body .progress_inner #step-4:checked + input + div + div + div + div > .box_item {
+  top: 10px;
+  left: 0px;
+  opacity: 1;
+}
+body .progress_inner #step-3:checked + input + input + div + div + div + div > .box_lid, body .progress_inner #step-5:checked + div + div + div + div > .box_lid, body .progress_inner #step-4:checked + input + div + div + div + div > .box_lid {
+  top: -1px;
+  left: 0px;
+  opacity: 1;
+}
+body .progress_inner #step-3:checked + input + input + div + div + div + div > .box_ribbon, body .progress_inner #step-5:checked + div + div + div + div > .box_ribbon, body .progress_inner #step-4:checked + input + div + div + div + div > .box_ribbon {
+  top: 70%;
+  left: 0px;
+  opacity: 0;
+}
+body .progress_inner #step-3:checked + input + input + div + div + div + div > .box_bow, body .progress_inner #step-5:checked + div + div + div + div > .box_bow, body .progress_inner #step-4:checked + input + div + div + div + div > .box_bow {
+  top: 0px;
+  left: 0px;
+  opacity: 0;
+}
+
+body .progress_inner #step-4:checked + input + div + div + div + div > .box_ribbon, body .progress_inner #step-5:checked + div + div + div + div > .box_ribbon {
+  top: 50%;
+  left: 0px;
+  opacity: 1;
+}
+body .progress_inner #step-4:checked + input + div + div + div + div > .box_bow, body .progress_inner #step-5:checked + div + div + div + div > .box_bow {
+  top: -10px;
+  left: 0px;
+  opacity: 1;
+}
+
+body .progress_inner #step-5:checked + div + div + div + div > .box_tag {
+  top: 10px;
+  left: 20px;
+  opacity: 1;
+}
+body .progress_inner #step-5:checked + div + div + div + div > .box_string {
+  top: 10px;
+  left: 20px;
+  opacity: 1;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body .progress_inner, body .progress_inner__step:before {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 35%;
+  transform: translateY(-50%);
+  margin: auto;
+}
+
+body .progress_inner__bar--set, body .progress_inner__bar {
+  height: 6px;
+  left: 10%;
+  background: repeating-linear-gradient(45deg, #2e7cf1, #2e7cf1 4px, #1f4bc5 4px, #1f4bc5 10px);
+  transition: width 800ms cubic-bezier(0.915, 0.015, 0.3, 1.005);
+  border-radius: 6px;
+  width: 0;
+  position: relative;
+  z-index: -1;
+}
+
+/* círculos com datas */
+body .progress_inner__step:before {
+  width: 50px;
+  height: 50px;
+  color: #130701;
+  background: white;
+  border: 3px solid #2e7cf1;
+  font-size: 14px;
+  top: 3px;
+  border-radius: 100%;
+  transition: all 0.4s;
+  cursor: pointer;
+  pointer-events: none;
+  line-height: 50px;
+  text-align: center;
+}
+
+body .progress_inner__step {
+  width: 20%;
+  font-size: 18px;
+  padding: 0 10px;
+  transition: all 0.4s;
+  float: left;
+  text-align: center;
+  position: relative;
+}
+body .progress_inner__step label {
+  padding-top: 50px;
+  top: -20px;
+  display: block;
+  position: relative;
+  cursor: pointer;
+}
+body .progress_inner__step:hover {
+  color: white;
+}
+body .progress_inner__step:hover:before {
+  color: white;
+  background: #2e7cf1;
+}
+
+body .progress_inner {
+  height: 200px;
+  width: 700px;
+}
+body .progress_inner #step-5:checked + div {
+  width: 80%;
+}
+body .progress_inner #step-5:checked + div + div + div > .tab:nth-of-type(5) {
+  opacity: 1;
+  top: 0;
+}
+body .progress_inner #step-5:checked + div + div + div + div {
+  right: 10%;
+}
+body .progress_inner #step-4:checked + input + div {
+  width: 60%;
+}
+body .progress_inner #step-4:checked + input + div + div + div > .tab:nth-of-type(4) {
+  opacity: 1;
+  top: 0;
+}
+body .progress_inner #step-4:checked + input + div + div + div + div {
+  right: 30%;
+}
+body .progress_inner #step-3:checked + input + input + div {
+  width: 40%;
+}
+body .progress_inner #step-3:checked + input + input + div + div + div > .tab:nth-of-type(3) {
+  opacity: 1;
+  top: 0;
+}
+body .progress_inner #step-3:checked + input + input + div + div + div + div {
+  right: 50%;
+}
+body .progress_inner #step-2:checked + input + input + input + div {
+  width: 20%;
+}
+body .progress_inner #step-2:checked + input + input + input + div + div + div > .tab:nth-of-type(2) {
+  opacity: 1;
+  top: 0;
+}
+body .progress_inner #step-2:checked + input + input + input + div + div + div + div {
+  right: 70%;
+}
+body .progress_inner #step-1:checked + input + input + input + input + div {
+  width: 0%;
+}
+body .progress_inner #step-1:checked + input + input + input + input + div + div + div > .tab:nth-of-type(1) {
+  opacity: 1;
+  top: 0;
+}
+body .progress_inner #step-1:checked + input + input + input + input + div + div + div + div {
+  right: 90%;
+}
+body .progress_inner__step:nth-of-type(1):before {
+  content: "10/5";
+}
+body .progress_inner__step:nth-of-type(2):before {
+  content: "31/7";
+}
+body .progress_inner__step:nth-of-type(3):before {
+  content: "4/8";
+}
+body .progress_inner__step:nth-of-type(4):before {
+  content: "21/8";
+}
+body .progress_inner__step:nth-of-type(5):before {
+  content: "??";
+}
+body .progress_inner__bar--set {
+  width: 80%;
+  top: -6px;
+  background: var(--navy-blue);
+  position: relative;
+  z-index: -2;
+}
+body .progress_inner__tabs .tab {
+  opacity: 0;
+  position: absolute;
+  top: 40px;
+  text-align: center;
+  margin-top: 80px;
+  box-shadow: 0px 2px 6px #2e7cf1;
+  padding: 30px;
+  background: white;
+  border-radius: 10px;
+  transition: all 0.2s;
+}
+body .progress_inner__tabs .tab h2 {
+  margin: 0;
+  color: #04499F;
+}
+body .progress_inner__tabs .tab p {
+  font-weight: 400;
+  opacity: 0.8;
+  margin-top: 0.6em;
+  font-size: 20px;
+}
+body .progress_inner input[type=radio] {
+  display: none;
+}

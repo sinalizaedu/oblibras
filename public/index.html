@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./stylesheets/style.css" />
+  <link rel="stylesheet" href="./stylesheets/timeline.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <title>OBMLibras</title>
+</head>
+
+<body style="overflow: hidden;">
+  <nav class="nav">
+    <div class="nav__container container">
+      <div class="nav__left">
+        <button class="nav__hamburger" aria-label="Menu"></button>
+        <ul class="nav__nav-desktop">
+          <li class="nav__desktop-item">
+            <a href="obmlibras.html" title="OBMLibras" class="nav__desktop-link">
+              <img width="60" height="100" viewBox="0 0 60 100" fill="none" class="nav__logo"
+                src="./imgs/logo-obm.png" />
+            </a>
+          </li>
+          <li class="nav__desktop-item">
+            <a href="obflibras.html" title="OBFLibras" class="nav__desktop-link">
+              <img width="60" height="100" viewBox="0 0 30 50" fill="none" class="nav__logo"
+                src="./imgs/logo-obf.png" />
+            </a>
+          </li>
+          <li class="nav__desktop-item">
+            <a href="obalibras.html" title="OBALibras" class="nav__desktop-link">
+              <img width="60" height="100" viewBox="0 0 30 50" fill="none" class="nav__logo"
+                src="./imgs/logo-oba.png" />
+            </a>
+          </li>
+        </ul>
+
+        <span class="nav__logo-name">OBM Libras</span>
+      </div>
+      <div class="nav__right">
+        <button class="nav__hamburger" aria-label="Menu"></button>
+        <ul class="nav__nav-desktop">
+          <li class="nav__desktop-item">
+            <a href="#" class="btn btn-secondary nav__desktop-link">Embaixadores</a>
+          </li>
+          <li class="nav__desktop-item">
+            <a href="#" class="btn nav__desktop-link">Inscrições</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="nav__mobile-nav">
+      <div class="nav__mobile-nav container">
+        <ul class="nav__mobile-links">
+          <li class="nav__mobile-item">
+            <a href="#" class="nav__mobile-link">Inscrições</a>
+          </li>
+          <li class="nav__mobile-item">
+            <a href="#" class="nav__mobile-link">Embaixadores</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header class="index">
+    <h1 class="index__sub">OBLibras</h1>
+  </header>
+  <p class="index__footer">2023 • Sinaliza Enem • CNPJ 39.551.094/0001-22 • Rio de Janeiro, Brasil</p>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <script>
+    var hamburger = document.querySelector(".nav__hamburger");
+    var body = document.querySelector("body");
+    var mobileNavigation = document.querySelector(".nav__mobile-nav");
+
+    AOS.init();
+
+    function toggleMobileNav(e) {
+      body.classList.toggle("mobile-nav-open");
+    }
+
+    function isModalOpen() {
+      return body.classList.contains("mobile-nav-open") ? true : false;
+    }
+
+    // FIXME: Find a better way to close modal when body is clicked
+    function closeMobileMenu(e) {
+      console.log(
+        e.target.classList.contains("nav__mobiile-item") ||
+        e.target.classList.contains("nav__hamburger") ||
+        e.target.classList.contains("nav__container")
+      );
+      if (
+        isModalOpen() &&
+        (e.target.classList.contains("nav__mobiile-item") ||
+          e.target.classList.contains("nav__hamburger"))
+      )
+        return;
+
+      body.classList.remove("mobile-nav-open");
+    }
+
+    window.addEventListener("click", closeMobileMenu);
+
+    hamburger.addEventListener("click", toggleMobileNav);
+  </script>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-89929831-11"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+
+    gtag("config", "UA-89929831-11");
+  </script>
+</body>
+
+</html>
